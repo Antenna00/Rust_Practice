@@ -62,6 +62,8 @@ pub fn run() {
     //you must use .unwrap()
 
     println!("{}", s.chars().next().unwrap());
+    println!("Test {:?}", s.chars().nth(3)); //Produce none
+    //println!("Test2 {}", s.chars().nth(3).unwrap()); unwrapping non-existent index will cause panic
 
     //Assertion testing
     let mut b: bool = true;
@@ -72,6 +74,4 @@ pub fn run() {
     //If both variables are equal then it's fine otherwise it gives error.
     assert_eq!(2, s.len());
     assert_eq!(10, s.capacity());
-
-
 }
